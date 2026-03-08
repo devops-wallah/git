@@ -47,3 +47,6 @@
     - Now commit the changes and push to update in remote.
 
 8. You cloned a repository but forgot to specify --recurse-submodules. How do you initialize submodules afterward?
+    - `git submodule add <repo-url> <path>` 
+    - `git submodule update --init --recursive`
+    
