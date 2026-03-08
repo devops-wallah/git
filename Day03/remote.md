@@ -20,7 +20,11 @@
     - Safe way is alway rebase our branch with main.
 
 4. A team member deleted a remote branch. How can you recover it if you still have it locally?
+    - `git push origin <branch name>
 
 5. You need to contribute to an open-source project. What steps will you take to fork and create a pull request?
+    - If project admin have enabled fork. we can fork it. make changes to fork (direct merge to main)
+    - Open PR using fork.
 
 6. How do you revert a pushed commit that is causing issues in production?
+    -  We can use ` git revert <commit-id>` then commit and push it.
