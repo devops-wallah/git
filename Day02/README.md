@@ -1,4 +1,4 @@
-# Day 1
+# Day 2
 
 - [Secrets Removal fri=om entire repo](./secrets.md)
 - [How to Recover Deleted Branch?](./recover-branch.md)
