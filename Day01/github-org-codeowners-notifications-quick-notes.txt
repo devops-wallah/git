@@ -1,0 +1,139 @@
+================================================
+GitHub Organization + CODEOWNERS (Quick Notes)
+================================================
+
+================================================
+GitHub Organization + CODEOWNERS + Notifications
+================================================
+
+1. GitHub Organization
+------------------------------------------------
+Shared account to manage:
+- repositories
+- teams
+- permissions
+
+Example:
+Org: DevOps
+Members: Admin, Dev1, Dev2
+Team: Infra
+
+2. Organization Roles
+------------------------------------------------
+Owner  → full control
+Admin  → manage repositories
+Member → developer access
+
+3. Teams
+------------------------------------------------
+Group developers for permissions & notifications.
+
+Example:
+Team: Infra
+Members: Dev1, Dev2
+
+Mention team:
+@DevOps/infra
+
+Result:
+All team members receive notifications.
+
+4. Repository Access
+------------------------------------------------
+Repo → Settings → Collaborators and teams
+
+Permissions:
+Read | Write | Maintain | Admin
+
+Example:
+Infra team → Write access
+
+5. Email Notifications Configuration
+------------------------------------------------
+User level:
+
+GitHub → Profile → Settings → Notifications
+
+Options:
+Participating & @mentions
+Watching repositories
+All activity
+
+Recommended:
+Participating & @mentions
+
+6. Repository Watch Notifications
+------------------------------------------------
+Repo → Watch (top-right)
+
+Options:
+Not watching
+Releases only
+Watching
+Custom
+
+Watching → receive notifications + emails.
+
+7. CODEOWNERS
+------------------------------------------------
+File that defines responsible developers/teams
+for specific files.
+
+When PR modifies those files:
+GitHub automatically
+- requests review
+- sends notifications
+- emails owners (if enabled)
+
+8. CODEOWNERS Location
+------------------------------------------------
+.github/CODEOWNERS   (best practice)
+
+9. CODEOWNERS Example
+------------------------------------------------
+
+/terraform/  @DevOps/infra
+/kubernetes/ @DevOps/infra
+/scripts/    @DevOps/infra
+*            @DevOps/infra
+
+10. Workflow
+------------------------------------------------
+
+Developer creates PR
+        ↓
+GitHub reads CODEOWNERS
+        ↓
+Owner team identified
+        ↓
+Review request sent
+        ↓
+Team receives:
+  - GitHub notification
+  - Email notification
+        ↓
+Team approves PR
+        ↓
+PR merged
+
+11. Branch Protection
+------------------------------------------------
+Repo → Settings → Branches → Add rule
+
+Enable:
+Require pull request reviews
+Require review from Code Owners
+
+Result:
+PR cannot merge without approval.
+
+12. Interview One-Line Answer
+------------------------------------------------
+GitHub CODEOWNERS automatically assigns reviewers
+and sends notifications (GitHub + Email) to the
+responsible team when specific files are modified
+in a pull request.
+
+================================================
+END
+================================================
